@@ -42,7 +42,6 @@ int MostrarClientesConMasCompletados (eCliente listaClientes[], int tamClientes,
 				if (!listaClientes[i].isEmpty && (contador[i].contador > maximo || flag)) {
 					maximo = contador[i].contador;
 					flag = 0;
-					printf("%d\n", maximo);
 				}
 			}
 
@@ -97,7 +96,6 @@ int MostrarClientesConMasPendientes (eCliente listaClientes[], int tamClientes, 
 				if (!listaClientes[i].isEmpty && (contador[i].contador > maximo || flag)) {
 					maximo = contador[i].contador;
 					flag = 0;
-					printf("%d\n", maximo);
 				}
 			}
 
@@ -197,14 +195,10 @@ int MostrarMenuPrincipal (eCliente listaClientes[], int tamClientes, ePedido lis
 					break;
 
 				case 12:
-					BajaLocalidad(listaLocalidades, tamLocalidades, listaClientes, tamClientes, listaPedidos, tamPedidos);
-					break;
-
-				case 13:
 					MostrarClientesConMasPendientes(listaClientes, tamClientes, listaPedidos, tamPedidos);
 					break;
 
-				case 14:
+				case 13:
 					MostrarClientesConMasCompletados(listaClientes, tamClientes, listaPedidos, tamPedidos);
 					break;
 
